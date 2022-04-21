@@ -1,2 +1,2 @@
 # meally_app
-meally app
+meally app thesis project
