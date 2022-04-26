@@ -6,4 +6,59 @@
     android:layout_height="match_parent"
     tools:context=".SigninActivity">
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout9"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Email"
+        app:endIconMode="clear_text"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/design_default_color_error"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout10"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Password"
+        app:endIconMode="password_toggle"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/design_default_color_error"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout9"
+        tools:layout_editor_absoluteX="1dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="105dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="3dp"
+        android:text="SIGNIN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout10" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
