@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">meally_app</string>
+    <string name="meally_title">meal.ly</string>
+    <string name="meally_slogan">RESCUE A MEAL TODAY</string>
+    <string name="chowrev">From <b>ChowRev Inc.</b></string>
 </resources>
