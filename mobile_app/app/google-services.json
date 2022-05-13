@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "955323100220",
+    "firebase_url": "https://meally-efd55-default-rtdb.firebaseio.com",
+    "project_id": "meally-efd55",
+    "storage_bucket": "meally-efd55.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955323100220:android:45f4ad0d82044660cba739",
+        "android_client_info": {
+          "package_name": "com.example.meally_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955323100220-8iphkfr02dpf7j9vqt6vvavp7phdphtl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA46O8pq55psbkJ8JcORux7_MreMEeEJUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955323100220-8iphkfr02dpf7j9vqt6vvavp7phdphtl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

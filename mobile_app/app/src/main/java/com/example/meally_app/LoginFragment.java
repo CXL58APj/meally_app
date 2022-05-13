@@ -75,7 +75,10 @@ public class LoginFragment extends Fragment {
         NavController navController= Navigation.findNavController(view);
         Button btnLoginCustomer = view.findViewById(R.id.loginBtnCustomer);
         Button btnLoginStore = view.findViewById(R.id.loginBtnStore);
+        TextView reg = view.findViewById(R.id.btnReg);
         btnLoginCustomer.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View v) {
                 navController.navigate(R.id.action_loginFragment3_to_loginAsCustomerFragment);
@@ -85,6 +88,13 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 navController.navigate(R.id.action_loginFragment3_to_loginAsStoreFragment);
+            }
+        });
+
+        reg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.action_loginFragment3_to_registerFragment);
             }
         });
     }
