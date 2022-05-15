@@ -5,6 +5,7 @@
     <string name="chowrev">From <b>ChowRev Inc.</b></string>
     <string name="lblsignup">Don\'t have an account? <b>Sign Up</b></string>
     <string name="lblsingin">Already have an account? <b>Sign In</b></string>
+    <string name="lblcustomerforgotpass">Forgot password?</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

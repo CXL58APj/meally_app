@@ -1,5 +1,6 @@
 package com.example.meally_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,6 +10,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -73,29 +75,32 @@ public class LoginFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         NavController navController= Navigation.findNavController(view);
-        Button btnLoginCustomer = view.findViewById(R.id.loginBtnCustomer);
-        Button btnLoginStore = view.findViewById(R.id.loginBtnStore);
-        TextView reg = view.findViewById(R.id.btnReg);
-        btnLoginCustomer.setOnClickListener(new View.OnClickListener() {
+//         Initialization of the buttons
+        Button btnLogin = view.findViewById(R.id.loginBtnCustomer);
+        TextView btnReg = view.findViewById(R.id.btnReg);
 
-
+//        Display LoginCustomerActivity(activity_login_customer.xml) if clicked
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navController.navigate(R.id.action_loginFragment3_to_loginAsCustomerFragment);
-            }
-        });
-        btnLoginStore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                navController.navigate(R.id.action_loginFragment3_to_loginAsStoreFragment);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent i= new Intent(getActivity(), LoginCustomerActivity.class);
+                        startActivity(i);
+                    }
+                },100);
             }
         });
 
-        reg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                navController.navigate(R.id.action_loginFragment3_to_registerFragment);
-            }
-        });
+//        Display RegisterFragment(fragment_register.xml) if clicked
+    btnReg.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            navController.navigate(R.id.action_loginFragment3_to_registerFragment);
+        }
+    });
+
+
     }
 }

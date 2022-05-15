@@ -1,5 +1,6 @@
 package com.example.meally_app;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -73,28 +75,30 @@ public class RegisterFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         NavController navController= Navigation.findNavController(view);
-        Button btnRegCustomer = view.findViewById(R.id.regBtnCustomer);
-        Button btnRegStore = view.findViewById(R.id.regBtnStore);
+
+//        Initialization of the buttons
         TextView login = view.findViewById(R.id.btnLogin);
-        btnRegCustomer.setOnClickListener(new View.OnClickListener() {
+        Button btnRegAsCustomer = view.findViewById(R.id.regBtnCustomer);
 
-
-            @Override
-            public void onClick(View v) {
-                navController.navigate(R.id.action_registerFragment_to_registerCustomerFragment);
-            }
-        });
-        btnRegStore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                navController.navigate(R.id.action_registerFragment_to_registerStoreFragment);
-            }
-        });
-
+//        Display SigninActivity if clicked
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 navController.navigate(R.id.action_registerFragment_to_loginFragment3);
+            }
+        });
+
+//        Display RegisterCustomerActivity if clicked
+        btnRegAsCustomer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent i= new Intent(getActivity(), RegisterCustomerActivity.class);
+                        startActivity(i);
+                    }
+                },100);
             }
         });
 

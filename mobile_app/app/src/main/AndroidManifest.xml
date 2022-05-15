@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Meally_app">
         <activity
-            android:name=".RegisterStoreActivity"
+            android:name=".ForgotPasswordCustomerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginCustomerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterCustomerActivity"
             android:exported="false" />
         <activity
             android:name=".DashboardActivity"

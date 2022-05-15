@@ -12,11 +12,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        Hide the action bar
         getSupportActionBar().hide();
+//        Splash screen, display SigincAtivity after 3 seconds
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i= new Intent(MainActivity.this, RegisterStoreActivity.class);
+                Intent i= new Intent(MainActivity.this, SigninActivity.class);
                 startActivity(i);
                 finish();
             }
